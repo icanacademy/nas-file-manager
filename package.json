@@ -1,0 +1,23 @@
+{
+  "name": "nas-file-manager",
+  "version": "1.0.0",
+  "description": "A web-based file manager for ipTIME NAS systems using WebDAV",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 3000",
+    "build": "echo 'No build process required for static files'",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "nas",
+    "file-manager",
+    "webdav",
+    "iptime",
+    "web-app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

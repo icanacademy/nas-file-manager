@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAS File Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>📁 NAS File Manager</h1>
+            <div class="connection-status" id="connectionStatus">Disconnected</div>
+        </header>
+
+        <div class="file-manager" id="fileManager">
+            <div class="toolbar">
+                <div class="breadcrumb" id="breadcrumb"></div>
+                <div class="actions">
+                    <button id="uploadBtn" title="Upload File">📤 Upload</button>
+                    <button id="newFolderBtn" title="New Folder">📁 New Folder</button>
+                    <button id="refreshBtn" title="Refresh">🔄 Refresh</button>
+                    <button id="reconnectBtn" title="Reconnect">🔄 Reconnect</button>
+                </div>
+            </div>
+
+            <div class="file-list-container">
+                <div class="file-list-header">
+                    <div class="file-name">Name</div>
+                    <div class="file-size">Size</div>
+                    <div class="file-modified">Modified</div>
+                    <div class="file-actions">Actions</div>
+                </div>
+                <div class="file-list" id="fileList">
+                    <div class="loading">Loading files...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-modal" id="uploadModal" style="display: none;">
+            <div class="modal-content">
+                <h3>Upload Files</h3>
+                <input type="file" id="fileInput" multiple>
+                <div class="upload-progress" id="uploadProgress"></div>
+                <div class="modal-actions">
+                    <button id="uploadConfirm">Upload</button>
+                    <button id="uploadCancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="webdav-client.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
